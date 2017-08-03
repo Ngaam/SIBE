@@ -129,19 +129,7 @@ DEFINE_string(test, "",
     "'-test=*', test samples with labels starting from 0.");
 DEFINE_int32(echo, 20,
     "'-echo=20', number of echoes (optional), its default value is 20.");
-// DEFINE_string(snapshot, "",
-//     "Optional; the snapshot solver state to resume training.");
-// DEFINE_string(weights, "",
-//     "Optional; the pretrained weights to initialize finetuning, "
-//     "separated by ','. Cannot be set simultaneously with snapshot.");
-/*
-DEFINE_string(sigint_effect, "stop",
-    "Optional; action to take when a SIGINT signal is received: "
-    "snapshot, stop or none.");
-DEFINE_string(sighup_effect, "snapshot",
-    "Optional; action to take when a SIGHUP signal is received: "
-    "snapshot, stop or none.");
-*/
+
 // A simple registry for sibe commands.
 typedef int (*BrewFunction)();
 typedef std::map<sibe::string, BrewFunction> BrewMap;
@@ -389,22 +377,6 @@ int device_query() {
   }
   return 0;
 }
-// Translate the signal effect the user specified on the command-line to the
-// corresponding enumeration.
-//   sibe::SolverAction::Enum GetRequestedAction(
-//     const std::string& flag_value) {
-//   if (flag_value == "stop") {
-//     return sibe::SolverAction::STOP;
-//   }
-//   if (flag_value == "snapshot") {
-//     return sibe::SolverAction::SNAPSHOT;
-//   }
-//   if (flag_value == "none") {
-//     return sibe::SolverAction::NONE;
-//   }
-//   LOG(FATAL) << "Invalid signal effect \""<< flag_value << "\" was specified";
-// }
-
 
 
 int metaomics_statistics() {
@@ -712,65 +684,7 @@ int pdb_parser() {
 int fold_protein() {
   // CHECK_GT(FLAGS_param.size(), 0) << "Need a -param=*.par of parameter settings to fold!";
 
-  // sibe::SolverParameter solver_param;
-  // LOG(INFO) << solver_param.phase();
-  // sibe::ReadSolverParamsFromTextFileOrDie(FLAGS_param, &solver_param);
-//  LOG(INFO) << sibe::SolverParameter_SolverMode_GPU;
-  // printf("Here we are at fold()\n");
-  // If the gpus flag is not provided, allow the mode and device to be set
-  // in the solver prototxt.
-//   if (FLAGS_gpu.size() == 0 && solver_param.solver_mode() == sibe::SolverParameter_SolverMode_GPU) {
-//     if (solver_param.has_device_id()) {
-//       FLAGS_gpu = "" + boost::lexical_cast<string>(solver_param.device_id());
-//     }
-//     else {  // Set default GPU if unspecified
-//       FLAGS_gpu = "" + boost::lexical_cast<string>(0);
-//     }
-//   }
-
-//   vector<int> gpus;
-//   get_gpus(&gpus);
-//   if (gpus.size() == 0) {
-//     LOG(INFO) << "Use CPU.";
-//     Sibe::set_mode(Sibe::CPU);
-//   }
-//   else {
-//     ostringstream s;
-//     for (int i = 0; i < gpus.size(); ++i) {
-//       s << (i ? ", " : "") << gpus[i];
-//     }
-//     LOG(INFO) << "Using GPUs " << s.str();
-// #ifndef CPU_ONLY
-//     cudaDeviceProp device_prop;
-//     for (int i = 0; i < gpus.size(); ++i) {
-//       cudaGetDeviceProperties(&device_prop, gpus[i]);
-//       LOG(INFO) << "GPU " << gpus[i] << ": " << device_prop.name;
-//     }
-// #endif
-//     solver_param.set_device_id(gpus[0]);
-//     Sibe::SetDevice(gpus[0]);
-//     Sibe::set_mode(Sibe::GPU);
-//     Sibe::set_solver_count(gpus.size());
-//   }
-// //std::cerr << "========================================" << FLAGS_sigint_effect <<"------------"<< FLAGS_sighup_effect<<std::endl;
-// //  sibe::SignalHandler signal_handler( GetRequestedAction(FLAGS_sigint_effect), GetRequestedAction(FLAGS_sighup_effect));
-//   shared_ptr<sibe::Solver<double> > solver(sibe::SolverRegistry<double>::CreateSolver(solver_param));
-//std::cerr << "========================================" << signal_handler.GetActionFunction()<<std::endl;
-/*
-  solver->SetActionFunction(signal_handler.GetActionFunction());
-  if (gpus.size() > 1) {
-    LOG(INFO) << "Starting simulation on multiple GPUs ...";
-    sibe::P2PSync<double> sync(solver, NULL, solver->param());
-    sync.Run(gpus);
-  }
-  else {
-    LOG(INFO) << "Starting simulation on a single GPU ...";
-    solver->Solve();
-  }
-*/
-//   LOG(INFO) << "Fold is Done.";
-// sibe::SolverParameter xx;
-// std::cerr<<"===="<<xx.lr_policy();
+  
   return 0;
 }
 /*===== Folding =====*/
