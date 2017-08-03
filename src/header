@@ -1,0 +1,37 @@
+/**
+ * The C++ Package of SIBE (Statistical Informatics for Biological Engine).
+ * Copyright (C) 2015- All Rights Reserved - Ngaam J. Cheung.
+ * Contact: ngaam.ch 'AT' gmail.com
+ *
+ * This library was partially written at the James Franck Institute at 
+ * the University of Chicago. Gordon Center for Integrated Science, 
+ * E226. 929 East 57th Street, Chicago, IL 60637, USA, 
+ * and at Department of Brain & Cognitive Sciences at Daegu Gyeongbuk 
+ * Institute of Science & Technology. DGIST E4-505, Daegu 42988, Korea 
+ * Homepage: http://godzilla.uchicago.edu/pages/ngaam/sibe/index.html
+ *
+ * Permission to use, copy, modify, and distribute this software and its
+ * documentation with or without modifications and for any purpose and
+ * without fee is hereby granted, provided that any copyright notices
+ * appear in all copies and that both those copyright notices and this
+ * permission notice appear in supporting documentation, and that the
+ * names of the contributors or copyright holders not be used in
+ * advertising or publicity pertaining to distribution of the software
+ * without specific prior permission.
+ *
+ * THE CONTRIBUTORS AND COPYRIGHT HOLDERS OF THIS SOFTWARE DISCLAIM ALL
+ * WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO EVENT SHALL THE
+ * CONTRIBUTORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY SPECIAL, INDIRECT
+ * OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS
+ * OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE
+ * OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE
+ * OR PERFORMANCE OF THIS SOFTWARE.
+ *
+ */
+
+/**
+ * This file contains the implementation of calculating 
+ *
+ */
+
