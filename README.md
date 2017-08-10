@@ -1,6 +1,6 @@
 # Sibe
 
-[Sibe](http://godzilla.uchicago.edu/pages/ngaam/sibe/) is a biological engine for both protein dynamics & analyses and statistical analysis in genomics. Sibe is released under the [BSD 2-Clause license](https://github.com/BVLC/caffe/blob/master/LICENSE).
+[Sibe](http://godzilla.uchicago.edu/pages/ngaam/sibe/) is a biological engine for both protein dynamics & analyses and statistical analysis in genomics. The code of Sibe is at a prototype. Hope that it can be useful in its current version, but it is likely that it contains bugs or other errors that impact its ability to give meaningful results. Sibe is released under the [BSD 2-Clause license](https://github.com/BVLC/caffe/blob/master/LICENSE).
 
 ## Functions
 
