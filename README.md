@@ -2,7 +2,11 @@
 
 [Sibe](http://godzilla.uchicago.edu/pages/ngaam/sibe/) is a biological engine for both protein dynamics & analyses and statistical analysis in genomics. The code of Sibe is at a prototype. Hope that it can be useful in its current version, but it is likely that it contains bugs or other errors that impact its ability to give meaningful results. Sibe is released under the [BSD 2-Clause license](https://github.com/BVLC/caffe/blob/master/LICENSE).
 
+- [What is Sibe for](#What-is-Sibe-for)
+- [What are the commands](#What-are-the-commands)
+
 ## What is Sibe for?
+<a name="What-is-Sibe-for"></a>
 Sibe is an analytical and computational framework, and it aims to provide a powerful tool for biological science, such as sequence data analysis, <i>in silico</i> protein folding and design. Though much of the software suite is oriented toward basic research on protein sequence analysis, folding and design, Sibe is also designed for extracting meaningful information hidden behind 'big data' based on machine learning. With the help of statistical analysis methods, Sibe can infer co-evolutionary information encoded in protein amino acids sequences for protein folding and design. Now, Sibe includes seven  easy-interfaced modules, several physical- & chemical-principles and statistical analysis methods, as well as different optimization solvers. The advantages of Sibe are:
 
 - Particular development for bioinformatics
@@ -13,7 +17,7 @@ Sibe is an analytical and computational framework, and it aims to provide a powe
 
 
 ## What are the commands?
-
+<a name="What-are-the-commands"></a>
 ```
 sibe: usage command line
  sibe <command> <args>
@@ -175,5 +179,6 @@ sibe learning -train=*.mat -test=*.mat
 
 
 ### How to cite Sibe?
+<a name="How-to-cite-Sibe"></a>
 Sibe: a biological engine from protein sequence statistics to its folding and design.
 
