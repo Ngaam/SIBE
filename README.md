@@ -174,7 +174,7 @@ sibe residue_contact -msa=example/test.aln
 ```
 sibe omics_sff2fastq -sff=test.sff
 ```
-**Basic statistial analysis**
+**Basic statistical analysis**
 ```
 sibe omics_statistics -fastx=test_with_quality scores.fastq
 ```
