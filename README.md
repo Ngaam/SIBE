@@ -2,11 +2,23 @@
 
 [Sibe](http://godzilla.uchicago.edu/pages/ngaam/sibe/) is a biological engine for both protein dynamics & analyses and statistical analysis in genomics. The code of Sibe is at a prototype. Hope that it can be useful in its current version, but it is likely that it contains bugs or other errors that impact its ability to give meaningful results. Sibe is released under the [BSD 2-Clause license](https://github.com/BVLC/caffe/blob/master/LICENSE).
 
-- [What is Sibe for](#What-is-Sibe-for)
-- [What are the commands](#What-are-the-commands)
+- [What is Sibe for](#what-is-sibe-for)
+- [What are the commands](#what-are-the-commands)
+- [Where to find Sibe web-server](#where-to-find-sibe-web-server)
+- [How to install Sibe](#how-to-install)
+    - [Dependencies](#dependency)
+    - [Install Sibe](#install-sibe)
+- [How to apply Sibe to your data](#how-to-apply-sibe)
+    - [Sibe on protein sequence](#sibe-on-protein-sequence)
+    - [Sibe on protein folding](#sibe-on-protein-folding)
+    - [Sibe on omcis data](#sibe-on-omics)
+    - [Statistical & optimization tools in Sibe](#sibe-on-stats-opt)
+    - [Sibe on learning](#sibe-on-learning)
+- [How to cite Sibe?](#how-to-cite-sibe)
 
+
+<a name="what-is-sibe-for"></a>
 ## What is Sibe for?
-<a name="What-is-Sibe-for"></a>
 Sibe is an analytical and computational framework, and it aims to provide a powerful tool for biological science, such as sequence data analysis, <i>in silico</i> protein folding and design. Though much of the software suite is oriented toward basic research on protein sequence analysis, folding and design, Sibe is also designed for extracting meaningful information hidden behind 'big data' based on machine learning. With the help of statistical analysis methods, Sibe can infer co-evolutionary information encoded in protein amino acids sequences for protein folding and design. Now, Sibe includes seven  easy-interfaced modules, several physical- & chemical-principles and statistical analysis methods, as well as different optimization solvers. The advantages of Sibe are:
 
 - Particular development for bioinformatics
@@ -16,8 +28,8 @@ Sibe is an analytical and computational framework, and it aims to provide a powe
 - Good for research calculations \& industry deployment
 
 
+<a name="what-are-the-commands"></a>
 ## What are the commands?
-<a name="What-are-the-commands"></a>
 ```
 sibe: usage command line
  sibe <command> <args>
@@ -57,10 +69,13 @@ sibe: usage command line
    learning             -learn a deep neural network from a given data-set 
 ```
 
+<a name="where-to-find-sibe-web-server"></a>
 ## Where to find Sibe web-server?
 A web-sever of Sibe is in developing, please find more details at [Sibe web-server](http://godzilla.uchicago.edu/pages/ngaam/sibe2/index.html).
 
+<a name="how-to-install"></a>
 ## How to install Sibe on Unix-like system?
+<a name="dependency"></a>
 ### Dependencies 
 CMake (2.8+) 
 ```
@@ -101,6 +116,7 @@ cd glog-0.3.*/
 ./configure
 make && make install
 ```
+<a name="install-sibe"></a>
 ### Install Sibe
 ```
 git clone https://github.com/Ngaam/Sibe.git
@@ -110,7 +126,9 @@ cmake ..
 make -j && make install
 ```
 
+<a name="how-to-apply-sibe"></a>
 ## How to apply Sibe to your data?
+<a name="sibe-on-protein-sequence"></a>
 ### Sibe on protein sequence
 **Trim a multiple sequence alignment**
 ```
@@ -136,6 +154,7 @@ sibe sequence_energy -mat=potential_matrix.mat -msa=input_seq.fasta
 ```
 sibe residue_coupling -msa=example/1hrd.msa
 ```
+<a name="sibe-on-protein-folding"></a>
 ### Sibe on protein folding simulation
 **Start from protein amino acid sequence**
 ```
@@ -149,6 +168,7 @@ sibe protein_folding -pdb=example/test.pdb -param=cfg/psibe.cfg
 ```
 sibe residue_contact -msa=example/test.aln
 ```
+<a name="sibe-on-omics"></a>
 ### Sibe on omcis data
 **Convert SFF to FASTQ**
 ```
@@ -158,6 +178,7 @@ sibe omics_sff2fastq -sff=test.sff
 ```
 sibe omics_statistics -fastx=test_with_quality scores.fastq
 ```
+<a name="sibe-on-stats-opt"></a>
 ### Statistical tools and optimization methods
 **Principle component analysis on a given matrix**
 ```
@@ -171,6 +192,7 @@ stats_ica -mat=test_matrix.csv
 ```
 sibe ai_chpso -ntrial=50 -max_iter=2000 -ngrp=8
 ```
+<a name="sibe-on-learning"></a>
 ### Sibe on fMRI data
 **Learning**
 ```
@@ -178,7 +200,7 @@ sibe learning -train=*.mat -test=*.mat
 ```
 
 
+<a name="how-to-cite-sibe"></a>
 ### How to cite Sibe?
-<a name="How-to-cite-Sibe"></a>
 Sibe: a biological engine from protein sequence statistics to its folding and design.
 
