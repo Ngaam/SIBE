@@ -2,7 +2,17 @@
 
 [Sibe](http://godzilla.uchicago.edu/pages/ngaam/sibe/) is a biological engine for both protein dynamics & analyses and statistical analysis in genomics. The code of Sibe is at a prototype. Hope that it can be useful in its current version, but it is likely that it contains bugs or other errors that impact its ability to give meaningful results. Sibe is released under the [BSD 2-Clause license](https://github.com/BVLC/caffe/blob/master/LICENSE).
 
-## Functions
+## What is Sibe for?
+Sibe is an analytical and computational framework, and it aims to provide a powerful tool for biological science, such as sequence data analysis, <i>in silico</i> protein folding and design. Though much of the software suite is oriented toward basic research on protein sequence analysis, folding and design, Sibe is also designed for extracting meaningful information hidden behind 'big data' based on machine learning. With the help of statistical analysis methods, Sibe can infer co-evolutionary information encoded in protein amino acids sequences for protein folding and design. Now, Sibe includes seven  easy-interfaced modules, several physical- & chemical-principles and statistical analysis methods, as well as different optimization solvers. The advantages of Sibe are:
+
+- Particular development for bioinformatics
+- Data-driven analyses and simulations
+- Expressive architecture \& extensible code
+- Scalable computation with high performance
+- Good for research calculations \& industry deployment
+
+
+## What are the commands?
 
 ```
 sibe: usage command line
@@ -43,7 +53,10 @@ sibe: usage command line
    learning             -learn a deep neural network from a given data-set 
 ```
 
-## Installation on Unix-like system
+## Where to find Sibe web-server?
+A web-sever of Sibe is in developing, please find more details at [Sibe web-server](http://godzilla.uchicago.edu/pages/ngaam/sibe2/index.html).
+
+## How to install Sibe on Unix-like system?
 ### Dependencies 
 CMake (2.8+) 
 ```
@@ -93,8 +106,7 @@ cmake ..
 make -j && make install
 ```
 
-
-## Examples
+## How to apply Sibe to your data?
 ### Sibe on protein sequence
 **Trim a multiple sequence alignment**
 ```
@@ -162,6 +174,6 @@ sibe learning -train=*.mat -test=*.mat
 ```
 
 
-## Citation
+### How to cite Sibe?
 Sibe: a biological engine from protein sequence statistics to its folding and design.
 
