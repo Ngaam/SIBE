@@ -12,7 +12,7 @@
     - [Sibe on protein sequence](#sibe-on-protein-sequence)
     - [Sibe on protein folding](#sibe-on-protein-folding)
     - [Sibe on omcis data](#sibe-on-omics)
-    - [Statistical & optimization tools in Sibe](#sibe-on-stats-opt)
+    - [Tools in Sibe](#sibe-on-stats-opt)
     - [Sibe on learning](#sibe-on-learning)
 - [How to cite Sibe?](#how-to-cite-sibe)
 
