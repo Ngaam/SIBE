@@ -14,7 +14,8 @@
     - [Sibe on omcis data](#sibe-on-omics)
     - [Tools in Sibe](#sibe-on-stats-opt)
     - [Sibe on learning](#sibe-on-learning)
-- [How to cite Sibe?](#how-to-cite-sibe)
+- [Acknowledgements](#acknowlegements)
+- [Reference](#how-to-cite-sibe)
 
 
 <a name="what-is-sibe-for"></a>
@@ -199,8 +200,16 @@ sibe ai_chpso -ntrial=50 -max_iter=2000 -ngrp=8
 sibe learning -train=*.mat -test=*.mat
 ```
 
+### Authors
+Ngaam J. Cheung (ngaam.ch@gmail.com)
+
+### Contributors
+
+<a name="acknowlegements"></a>
+### Acknowledgements
 
 <a name="how-to-cite-sibe"></a>
 ### How to cite Sibe?
 Sibe: a biological engine from protein sequence statistics to its folding and design.
+
 
