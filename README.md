@@ -201,7 +201,7 @@ sibe learning -train=*.mat -test=*.mat
 ```
 
 ### Authors
-[Ngaam J. Cheung](#nyaam.ch@gmail.com)
+[N. J. Cheung](#nyaam.ch@gmail.com)
 
 ### Contributors
 
