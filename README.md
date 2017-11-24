@@ -1,6 +1,6 @@
 # Sibe
 
-[Sibe](http://godzilla.uchicago.edu/pages/ngaam/sibe/) is a biological engine for both protein dynamics & analyses and statistical analysis in genomics. The code of Sibe is at a prototype. Hope that it can be useful in its current version, but it is likely that it contains bugs or other errors that impact its ability to give meaningful results. Sibe is released under the [BSD 2-Clause license](https://github.com/BVLC/caffe/blob/master/LICENSE).
+[Sibe](http://godzilla.uchicago.edu/pages/ngaam/sibe/) is a powerful digital engine, it can be used for biological science, particularly in protein dynamics & analyses and statistical analysis in genomics. The code of Sibe is at a prototype. Hope that it can be useful in its current version, but it is likely that it contains bugs or other errors that impact its ability to give meaningful results. Sibe is released under the [BSD 2-Clause license](https://github.com/BVLC/caffe/blob/master/LICENSE).
 
 - [What is Sibe for](#what-is-sibe-for)
 - [What are the commands](#what-are-the-commands)
@@ -41,33 +41,44 @@ sibe: usage command line
    device_query         -show GPU diagnostic information 
   
  work on the metaomics (see also: sibe help metaomics)
-   metaomics            -systematicallyanalyze sequencing data (reserved)
-   omics_sff2fastq      -convert an SFF file from the 454 genome sequencer
-                         to FASTQ including the sequences and quality scores
-   omics_stats          -basic statistical analysis on omics data
-   sequence_stats       -statistical analysis on a protein mutiple sequence alignment
-   sequence_design      -design a protein sequence
-   sequence_trim        -trim a multiple protein sequence alignment
-   sequence_energy      -calculate energy for a protein sequence or multiple sequences
-   sequence_potential   -estimate a multiple protein sequence alignment
-   point_mutation       -point mutation for a given protein sequence
-   residue_coupling     -coupling relationship betwen pairwise protein residues
-   
+  metaomics            -systematically analyze sequencing data (reserved)
+  omics_sff2fastq      -convert an SFF file from the 454 genome sequencer
+                        to FASTQ including the sequences and quality scores
+  omics_stats          -statistical analysis on omics data (TODO)
+  quality_control      -quality control for ChIP-seq/RNA-seq data (TODO)
+  peak_calling         -peak calling for ChIP-seq/RNA-seq data (TODO)
+ 
+ work on the proteomics (see also: sibe help proteomics)
+  sequence_stats       -statistical analysis on a protein mutiple sequence alignment
+  sequence_design      -design a protein sequence
+  sequence_trim        -trim a multiple protein sequence alignment
+  sequence_energy      -calculate energy for a protein sequence or multiple sequences
+  sequence_potential   -estimate a multiple protein sequence alignment
+  point_mutation       -point mutation for a given protein sequence
+  residue_coupling     -coupling relationship betwen pairwise protein residues
+  dna                  -calculations for DNA
+ 
  work on statistics tools (see also: sibe help statistics)
-   stats_pca             -principle component analysis on a given matrix
-   stats_ica             -independent component analysis on a given matrix
+  stats_pca            -principle component analysis on a given matrix
+  stats_ica            -independent component analysis on a given matrix
+  stats_tsne           -t-distributed stochastic neighbor embedding (t-SNE) method
  
  work on optimization tools (see also: sibe help optimization)
-   ai_chpso             -convergent heterogeneous particle swarm optimizer
+  opt_chpso            -the convergent heterogeneous particle swarm optimizer
+  opt_lbfgs            -the Broyden–Fletcher–Goldfarb–Shanno (BFGS) algorithm with limited-memory
+  opt_gd               -the Gradient Descent method
  
  work on protein folding (see also: sibe help folding)
-   fold_protein         -predict tertiary structure
-   protein_folding      -predict folding pathways & tertiary structure
-   residue_contact      -contacts between pairwise residues
-   pdb_parser           -parser PDB file
+  fold_protein         -predict tertiary structure
+  protein_folding      -predict folding pathways & tertiary structure
+  residue_contact      -contacts between pairwise residues
+  pdb_parser           -parser a PDB file and write it out in Sibe format
  
  work on deep learning (see also: sibe help learning)
-   learning             -learn a deep neural network from a given data-set 
+  img_learning         -learn a deep neural network from a given image data-set
+  fmri_learning        -learn a deep neural network from a given fMRI data-set
+  phsior               -protein torsion angle predictor based on regressive CNN deep network
+
 ```
 
 <a name="where-to-find-sibe-web-server"></a>
@@ -197,7 +208,7 @@ sibe ai_chpso -ntrial=50 -max_iter=2000 -ngrp=8
 ### Sibe on fMRI data
 **Learning**
 ```
-sibe learning -train=*.mat -test=*.mat
+sibe fmri_learning -train=*.mat -test=*.mat
 ```
 
 ### Authors
