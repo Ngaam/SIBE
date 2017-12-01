@@ -65,6 +65,7 @@ sibe: usage command line
  
  work on optimization tools (see also: sibe help optimization)
   opt_chpso            -the convergent heterogeneous particle swarm optimizer
+  opt_jde              -the differential evolution optimizer
   opt_lbfgs            -the Broyden–Fletcher–Goldfarb–Shanno (BFGS) algorithm with limited-memory
   opt_gd               -the Gradient Descent method
  
@@ -142,74 +143,88 @@ make -j && make install
 ## How to apply Sibe to your data?
 <a name="sibe-on-protein-sequence"></a>
 ### Sibe on protein sequence
-**Trim a multiple sequence alignment**
+#### Trim a multiple sequence alignment
 ```
 sibe sequence_trim -msa=example/1hrd.msa
 ```
-**Create a potential from a given multiple sequence alignment**
+#### Create a potential from a given multiple sequence alignment
 ```
 sibe sequence_potential -msa=example/1hrd_trimed.aln
 ```
-**Statistical analysis on a given multiple sequence alignment**
+#### Statistical analysis on a given multiple sequence alignment
 ```
 sibe sequence_statistics -msa=example/1hrd.msa
 ```
-**Design a protein sequence**
+#### Design a protein sequence
 ```
 sibe sequence_design -seq=input_seq.fasta -mat=potential_matrix.mat -dseq=output_seq.fasta
 ```
-**Calculate energy for a protein sequence or multiple ones**
+#### Calculate energy for a protein sequence or multiple ones
 ```
 sibe sequence_energy -mat=potential_matrix.mat -msa=input_seq.fasta
 ```
-**Analyze coupling relationship betwen pairwise protein residues**
+#### Analyze coupling relationship betwen pairwise protein residues
 ```
 sibe residue_coupling -msa=example/1hrd.msa
 ```
 <a name="sibe-on-protein-folding"></a>
 ### Sibe on protein folding simulation
-**Start from protein amino acid sequence**
+#### Start from protein amino acid sequence
 ```
 sibe protein_folding -fasta=example/test.fasta -param=cfg/psibe.cfg
 ```
-**Or start from protein PDB**
+#### Or start from protein PDB
 ```
 sibe protein_folding -pdb=example/test.pdb -param=cfg/psibe.cfg
 ```
-**Protein residue contacts prediction**
+#### Protein residue contacts prediction
 ```
 sibe residue_contact -msa=example/test.aln
 ```
 <a name="sibe-on-omics"></a>
 ### Sibe on omcis data
-**Convert SFF to FASTQ**
+#### Convert SFF to FASTQ
 ```
 sibe omics_sff2fastq -sff=test.sff
 ```
-**Basic statistical analysis**
+#### Basic statistical analysis
 ```
 sibe omics_statistics -fastx=test_with_quality scores.fastq
 ```
 <a name="sibe-on-stats-opt"></a>
 ### Statistical tools and optimization methods
-**Principle component analysis on a given matrix**
+#### Principle component analysis on a given matrix
 ```
 stats_pca -mat=test_matrix.csv
 ```
-**Independent component analysis on a given matrix**
+#### Independent component analysis on a given matrix
 ```
 stats_ica -mat=test_matrix.csv
 ```
-**Convergent heterogeneous particle swarm optimizer**
+#### Convergent heterogeneous particle swarm optimizer
 ```
 sibe ai_chpso -ntrial=50 -max_iter=2000 -ngrp=8
 ```
 <a name="sibe-on-learning"></a>
-### Sibe on fMRI data
-**Learning**
+### Sibe for machine learning
+#### Phsior for torsion angles (&phi; and &psi;) prediction
+##### Training phase
 ```
-sibe fmri_learning -train=*.mat -test=*.mat
+sibe phsior -phase=0 -echo=20 -wsize=17
 ```
+##### Prediction phase
+```
+sibe phsior -phase=1 -wsize=17 -fastx=*.fasta
+```
+#### Learning on image data
+```
+sibe img_learning -dirt=example/learning_data
+```
+#### Learning on fMRI data
+```
+sibe fmri_learning -dirt=example/fmri_data
+```
+
 
 ### Authors
 [N. J. Cheung](#nyaam.ch@gmail.com)
